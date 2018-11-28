@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_feature_hdfs_path,input_mid_table_name
+from config import output_feature_hdfs_path,input_mid_table_name,dropFrame
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -31,6 +31,9 @@ hsqlContext = HiveContext(sc)
 
 # hsqlContext.registerDataFrameAsTable(midDf, "personal_cfsl_loan_deduct_seq")
 
+print input_mid_table_name
+print output_feature_hdfs_path
+
 midsqlDf = hsqlContext.sql("select idcard,"
                            "mec_type as goods_if_subbizcatname,"
                            "case when flag_error = 1 then 1 when flag_error > 1 then 2 else 3 end as req_if_trademsg,"
@@ -39,8 +42,8 @@ midsqlDf = hsqlContext.sql("select idcard,"
                            "datediff(current_timestamp, first_value(repay_tm) over(partition by no_mec,idcard order by repay_tm)) as day_open,"
                            "datediff(current_timestamp, repay_tm) as day_pay,"
                            "row_number() over (partition by idcard order by repay_tm desc ) as row_num "
-                           "from {mid_table}".format(input_mid_table_name)
-
+                           "from {mid_table}".format(mid_table=input_mid_table_name))
+midsqlDf.take(1)
 hsqlContext.registerDataFrameAsTable(midsqlDf, "personal_cfsl_loan_deduct_seq_mid")
 
 avgMidDf = hsqlContext.sql("select idcard,"
