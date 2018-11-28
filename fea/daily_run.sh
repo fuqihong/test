@@ -1,0 +1,1 @@
+nohup sh dailyYpdata.sh >> dailyYpdata.log 2>&1 &
