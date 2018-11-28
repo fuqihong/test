@@ -18,21 +18,8 @@ sys.setdefaultencoding('utf-8')
 
 key_cal = 'avg'
 
-sc = SparkContext(appName= key_cal + "sql_daily")
+sc = SparkContext(appName= key_cal + "_sql_daily")
 hsqlContext = HiveContext(sc)
-# midRDDS = sc.textFile('/user/qihong.fu/dwd.db/fea_personal_cfsl_loan_daily_ana/mid/*')
-# #midRDDS = sc.textFile('/Users/xilin.zheng/yeepay/PRD5/sql/personal_cfsl_loan_deduct_seq_100000/*')
-# midRDD = midRDDS.map(lambda x: x.split(',')).map(lambda x: splitfitter(x)).map(lambda row: (
-#     row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12]))
-#
-# midDf = hsqlContext.createDataFrame(midRDD,
-#                                     ['id_pay', 'idcard', 'no_card', 'no_mec', 'mec_type', 'repay_tm', 'pay_result',
-#                                      'amt', 'flag_error', 'repay_date', 'month', 'day', 'amt_s'])
-
-# hsqlContext.registerDataFrameAsTable(midDf, "personal_cfsl_loan_deduct_seq")
-
-print input_mid_table_name
-print output_feature_hdfs_path
 
 midsqlDf = hsqlContext.sql("select idcard,"
                            "mec_type as goods_if_subbizcatname,"
@@ -43,7 +30,7 @@ midsqlDf = hsqlContext.sql("select idcard,"
                            "datediff(current_timestamp, repay_tm) as day_pay,"
                            "row_number() over (partition by idcard order by repay_tm desc ) as row_num "
                            "from {mid_table}".format(mid_table=input_mid_table_name))
-midsqlDf.take(1)
+
 hsqlContext.registerDataFrameAsTable(midsqlDf, "personal_cfsl_loan_deduct_seq_mid")
 
 avgMidDf = hsqlContext.sql("select idcard,"

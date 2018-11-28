@@ -1,1 +1,9 @@
-nohup sh dailyYpdata.sh >> dailyYpdata.log 2>&1 &
+set -e
+
+if [ $# -eq 1 ];then
+  etl_day=$1
+else
+  etl_day=`date +%Y%m%d`
+fi
+
+nohup sh dailyYpdata.sh >> /var/log/pyspark/ypdaya/dailyYpdata.log.${etl_day} 2>&1 &
