@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_feature_hdfs_path,input_mid_table_name,dropFrame
+from config import output_feature_hdfs_path,input_mid_table_name,dropFrame,yes_time
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -17,6 +17,8 @@ sys.setdefaultencoding('utf-8')
 
 
 key_cal = 'countDayPay_1'
+print key_cal + "_sql_daily" + " run " + "*"*90
+
 sc = SparkContext(appName= key_cal + "_sql_daily")
 
 
@@ -28,8 +30,8 @@ midsqlDf = hsqlContext.sql("select idcard,"
                            "mec_type as goods_if_subbizcatname,"
                            "case when flag_error = 1 then 1 when flag_error > 1 then 2 else 3 end as req_if_trademsg,"
                            "pay_result as pay_result,"
-                           "datediff(current_timestamp, repay_tm) as day_pay "
-                           "from {mid_table} and repay_tm >= date_sub(current_timestamp,21)".format(mid_table=input_mid_table_name))
+                           "datediff('{current_time}', repay_tm) as day_pay "
+                           "from {mid_table} and repay_tm >= date_sub('{current_time}',21)".format(current_time = yes_time,mid_table=input_mid_table_name))
 
 hsqlContext.registerDataFrameAsTable(midsqlDf, "personal_cfsl_loan_deduct_seq_mid")
 
@@ -99,3 +101,4 @@ keys = countsqlDf.rdd.map(lambda row: dropFrame(row))
 keys.repartition(500).saveAsTextFile(save_path)
 #keys.repartition(500).saveAsTextFile('/Users/xilin.zheng/yeepay/PRD4/data3/countDayPay_1')
 sc.stop()
+print key_cal + "_sql_daily" + " success " + "*"*90

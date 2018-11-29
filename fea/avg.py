@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_feature_hdfs_path,input_mid_table_name,dropFrame
+from config import output_feature_hdfs_path,input_mid_table_name,dropFrame,yes_time
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -17,8 +17,12 @@ sys.setdefaultencoding('utf-8')
 
 
 key_cal = 'avg'
+print key_cal + "_sql_daily" + " run " + "*"*90
+
+
 
 sc = SparkContext(appName= key_cal + "_sql_daily")
+
 hsqlContext = HiveContext(sc)
 
 midsqlDf = hsqlContext.sql("select idcard,"
@@ -26,10 +30,10 @@ midsqlDf = hsqlContext.sql("select idcard,"
                            "case when flag_error = 1 then 1 when flag_error > 1 then 2 else 3 end as req_if_trademsg,"
                            "pay_result as pay_result,"
                            "amt as amt,"
-                           "datediff(current_timestamp, first_value(repay_tm) over(partition by no_mec,idcard order by repay_tm)) as day_open,"
-                           "datediff(current_timestamp, repay_tm) as day_pay,"
+                           "datediff('{current_time}', first_value(repay_tm) over(partition by no_mec,idcard order by repay_tm)) as day_open,"
+                           "datediff('{current_time}', repay_tm) as day_pay,"
                            "row_number() over (partition by idcard order by repay_tm desc ) as row_num "
-                           "from {mid_table}".format(mid_table=input_mid_table_name))
+                           "from {mid_table}".format(current_time=yes_time, mid_table=input_mid_table_name))
 
 hsqlContext.registerDataFrameAsTable(midsqlDf, "personal_cfsl_loan_deduct_seq_mid")
 
@@ -315,3 +319,5 @@ keySeconds.repartition(500).saveAsTextFile(save_path)
 #keySeconds.saveAsTextFile('/Users/xilin.zheng/yeepay/PRD4/data3/avg')
 
 sc.stop()
+
+print key_cal + "_sql_daily" + " success " + "*"*90

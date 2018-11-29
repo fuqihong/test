@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_feature_hdfs_path,input_mid_table_name,dropFrame
+from config import output_feature_hdfs_path,input_mid_table_name,dropFrame,yes_time
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -17,6 +17,8 @@ sys.setdefaultencoding('utf-8')
 
 key_cal = 'countDayOpen_1'
 key_cal_pre = 'countAll'
+print key_cal + "_sql_daily" + " run " + "*"*90
+
 sc = SparkContext(appName= key_cal + "_sql_daily")
 
 
@@ -35,8 +37,8 @@ midsqlDf = hsqlContext.sql("select idcard,"
                            "mec_type as goods_if_subbizcatname,"
                            "case when flag_error = 1 then 1 when flag_error > 1 then 2 else 3 end as req_if_trademsg,"
                            "pay_result as pay_result,"
-                           "datediff(current_timestamp, first_value(repay_tm) over(partition by no_mec,idcard order by repay_tm)) as day_open "
-                           "from {mid_table}".format(mid_table=input_mid_table_name))
+                           "datediff('{current_time}', first_value(repay_tm) over(partition by no_mec,idcard order by repay_tm)) as day_open "
+                           "from {mid_table}".format(current_time = yes_time, mid_table=input_mid_table_name))
 
 hsqlContext.registerDataFrameAsTable(midsqlDf, "personal_cfsl_loan_deduct_seq_mid")
 
@@ -124,3 +126,4 @@ keySeconds = countAvgDf.rdd.map(lambda row: dropFrame(row))
 keySeconds.repartition(500).saveAsTextFile(save_path_1)
 
 sc.stop()
+print key_cal + "_sql_daily" + " success " + "*"*90

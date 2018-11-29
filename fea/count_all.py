@@ -16,6 +16,9 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 key_cal = 'countAll'
+print key_cal + "_sql_daily" + " run " + "*"*90
+
+
 sc = SparkContext(appName = key_cal + "_sql_daily")
 hsqlContext = HiveContext(sc)
 
@@ -49,3 +52,6 @@ keys.repartition(500).saveAsTextFile(save_path)
 
 
 sc.stop()
+
+
+print key_cal + "_sql_daily" + " success " + "*"*90

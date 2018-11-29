@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_feature_hdfs_path,input_mid_table_name,dropFrame
+from config import output_feature_hdfs_path,input_mid_table_name,dropFrame,yes_time
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -16,6 +16,8 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 key_cal = 'third_2'
+print key_cal + "_sql_daily" + " run " + "*"*90
+
 sc = SparkContext(appName=key_cal + "_sql_daily")
 
 hsqlContext = HiveContext(sc)
@@ -132,7 +134,7 @@ zhyckkCountInitDf2 = hsqlContext.sql("select idcard,"
 hsqlContext.registerDataFrameAsTable(zhyckkCountInitDf2, "zhyckkCount2_init")
 
 zhyckkCountDf2 = hsqlContext.sql("select idcard,"
-                                 "count(*) as t03td147 "
+                                 "count(1) as t03td147 "
                                  "from zhyckkCount2_init aa where aa.pay_result = 1 and aa.repay_tm > last_fail_tm group by idcard")
 
 third_4_df = third_3_df.join(zhyckkCountDf2, third_3_df.idcard == zhyckkCountDf2.idcard, 'left_outer').select(
@@ -176,8 +178,8 @@ t03td150MidDf = hsqlContext.sql("select idcard as idcard, "
 hsqlContext.registerDataFrameAsTable(t03td150MidDf, "t03td150_mid")
 # 睡眠机构数 t03td150
 t03td150Df = hsqlContext.sql("select med.idcard,"
-                             "count(distinct case when datediff(current_date(),last_pay_tm)>180 then merchants else null end) as t03td150 "
-                             "from t03td150_mid as med group by med.idcard")
+                             "count(distinct case when datediff('{current_time}', last_pay_tm)>180 then merchants else null end) as t03td150 "
+                             "from t03td150_mid as med group by med.idcard".format(current_time= yes_time))
 
 third_6_df = third_5_df.join(t03td150Df, third_5_df.idcard == t03td150Df.idcard, 'left_outer').select(
     third_5_df.idcard,
@@ -221,3 +223,6 @@ keys = third_7_df.rdd.map(lambda row: dropFrame(row))
 keys.repartition(500).saveAsTextFile(save_path)
 
 sc.stop()
+
+
+print key_cal + "_sql_daily" + " success " + "*"*90

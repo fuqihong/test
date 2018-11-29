@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_feature_hdfs_path,input_mid_table_name,dropFrame
+from config import output_feature_hdfs_path,input_mid_table_name,dropFrame,yes_time
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -19,6 +19,8 @@ sys.setdefaultencoding('utf-8')
 
 
 key_cal = 'sum'
+print key_cal + "_sql_daily" + " run " + "*"*90
+
 sc = SparkContext(appName= key_cal + "_sql_daily")
 hsqlContext = HiveContext(sc)
 
@@ -31,10 +33,10 @@ midsqlDf = hsqlContext.sql("select "
                            "case when flag_error = 1 then 1 when flag_error > 1 then 2 else 3 end as req_if_trademsg,"
                            "pay_result as pay_result,"
                            "amt as amt,"
-                           "datediff(current_timestamp, first_value(repay_tm) over(partition by no_mec,idcard order by repay_tm)) as day_open,"
-                           "datediff(current_timestamp, repay_tm) as day_pay,"
+                           "datediff('{current_time}', first_value(repay_tm) over(partition by no_mec,idcard order by repay_tm)) as day_open,"
+                           "datediff('{current_time}', repay_tm) as day_pay,"
                            "row_number() over (partition by idcard order by repay_tm desc ) as row_num "
-                           "from {mid_table}".format(mid_table=input_mid_table_name))
+                           "from {mid_table}".format(current_time = yes_time,mid_table=input_mid_table_name))
 
 hsqlContext.registerDataFrameAsTable(midsqlDf, "personal_cfsl_loan_deduct_seq_mid")
 
@@ -46,7 +48,7 @@ sumMidDf = hsqlContext.sql("select idcard,"
                            "case when day_pay <= 1 then 1 when day_pay <= 7 then 2 when day_pay <= 14 then 3 when day_pay <= 21 then 4 when day_pay <= 30 then 5 when day_pay <= 90 then 6 when day_pay <= 180 then 7 when day_pay <= 360 then 8 else 9 end as day_pay,"
                            "case when row_num <= 5 then 1 when row_num <= 20 then 2 when row_num <= 50 then 3 when row_num <= 100 then 4 else 5 end as row_num,"
                            "sum(amt) as amt,"
-                           "count(*) as count_num "
+                           "count(1) as count_num "
                            "from personal_cfsl_loan_deduct_seq_mid yy "
                            "group by idcard,"
                            "goods_if_subbizcatname,"
@@ -1029,3 +1031,4 @@ keySeconds = sumAvgDf.rdd.map(lambda row: dropFrame(row))
 keys.repartition(500).saveAsTextFile(save_path_1)
 
 sc.stop()
+print key_cal + "_sql_daily" + " success " + "*"*90

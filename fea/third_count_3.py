@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_feature_hdfs_path,input_mid_table_name,dropFrame
+from config import output_feature_hdfs_path,input_mid_table_name,dropFrame,yes_time
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -17,6 +17,7 @@ sys.setdefaultencoding('utf-8')
 
 
 key_cal = 'third_count_3'
+print key_cal + "_sql_daily" + " run " + "*"*90
 sc = SparkContext(appName=key_cal + "_sql_daily")
 
 hsqlContext = HiveContext(sc)
@@ -25,11 +26,11 @@ hsqlContext = HiveContext(sc)
 
 kkOrgCountInitDf = hsqlContext.sql("select idcard, "
                                    "mec_type,"
-                                   "datediff(current_date(),repay_tm) as day_pay,"
+                                   "datediff('{current_time}',repay_tm) as day_pay,"
                                    "no_mec,"
                                    "pay_result,"
                                    "count(1) as times "
-                                   "from {mid_table} group by idcard,mec_type,datediff(current_date(),repay_tm),no_mec,pay_result".format(mid_table=input_mid_table_name))
+                                   "from {mid_table} group by idcard,mec_type,datediff('{current_time}', repay_tm),no_mec,pay_result".format(current_time=yes_time,mid_table=input_mid_table_name))
 
 hsqlContext.registerDataFrameAsTable(kkOrgCountInitDf, "kkOrgCountInit")
 
@@ -94,3 +95,4 @@ keys = kkOrgCountDf.rdd.map(lambda row: dropFrame(row))
 keys.repartition(500).saveAsTextFile(save_path)
 
 sc.stop()
+print key_cal + "_sql_daily" + " success " + "*"*90
