@@ -63,7 +63,7 @@ third_1_df = idcardDf.join(kksbNextDayDf, idcardDf.idcard == kksbNextDayDf.idcar
     kksbNextDayDf.t03td136, kksbNextDayDf.t03td137, kksbNextDayDf.t03td139,
     kksbNextDayDf.t03td140, kksbNextDayDf.t03td142, kksbNextDayDf.t03td143)
 
-third_1_df.show()
+#third_1_df.show()
 #third_1_df = hsqlContext.sql("select bb.idcard,aa.t03td136, aa.t03td137, aa.t03td139,aa.t03td140,aa.t03td142,aa.t03td143 from idcardDf bb left join kksbNextDayDf_table aa on bb.idcard = aa.idcard")
 
 #扣款失败后距离下一次成功的天数，按idcard
@@ -98,7 +98,7 @@ third_2_df = third_1_df.join(kksbNextDayDf2, third_1_df.idcard == kksbNextDayDf2
     third_1_df.t03td140, kksbNextDayDf2.t03td141, third_1_df.t03td142, third_1_df.t03td143,
     kksbNextDayDf2.t03td144)
 
-third_2_df.show()
+#third_2_df.show()
 
 # 最后一次扣款因为余额不足失败后扣款次数求和
 zhyckkCountInitDf = hsqlContext.sql("select idcard,"
@@ -121,7 +121,7 @@ third_3_df = third_2_df.join(zhyckkCountDf, third_2_df.idcard == zhyckkCountDf.i
     third_2_df.t03td140, third_2_df.t03td141, third_2_df.t03td142, third_2_df.t03td143,
     third_2_df.t03td144, zhyckkCountDf.t03td145, zhyckkCountDf.t03td146)
 
-third_3_df.show()
+#third_3_df.show()
 
 zhyckkCountInitDf2 = hsqlContext.sql("select idcard,"
                                      "repay_tm,"
@@ -141,7 +141,7 @@ third_4_df = third_3_df.join(zhyckkCountDf2, third_3_df.idcard == zhyckkCountDf2
     third_3_df.t03td140, third_3_df.t03td141, third_3_df.t03td142, third_3_df.t03td143,
     third_3_df.t03td144, third_3_df.t03td145, third_3_df.t03td146, zhyckkCountDf2.t03td147)
 
-third_4_df.show()
+#third_4_df.show()
 #
 # # 当前逾期机构数 最近一次扣款为扣款失败机构数
 # # 当前履约机构数 最近一次扣款为扣款成功机构数
@@ -165,7 +165,7 @@ third_5_df = third_4_df.join(zjyckkOrgCountDf, third_4_df.idcard == zjyckkOrgCou
     third_4_df.t03td140, third_4_df.t03td141, third_4_df.t03td142, third_4_df.t03td143,
     third_4_df.t03td144, third_4_df.t03td145, third_4_df.t03td146, third_4_df.t03td147, zjyckkOrgCountDf.t03td148,
     zjyckkOrgCountDf.t03td149)
-third_5_df.show()
+#third_5_df.show()
 #
 # # 睡眠机构数 截止查询时间，用户6个月内无交易记录的机构数
 t03td150MidDf = hsqlContext.sql("select idcard as idcard, "
@@ -186,7 +186,7 @@ third_6_df = third_5_df.join(t03td150Df, third_5_df.idcard == t03td150Df.idcard,
     third_5_df.t03td144, third_5_df.t03td145, third_5_df.t03td146, third_5_df.t03td147, third_5_df.t03td148,
     third_5_df.t03td149, t03td150Df.t03td150)
 
-third_6_df.show()
+#third_6_df.show()
 # # 最近1次 扣款失败(-客户余额不足) 金额
 # # 扣款失败(-除余额不足外其他客观原因)
 # # 扣款成功
@@ -214,7 +214,7 @@ third_7_df = third_6_df.join(zjyckkAmountDf, third_6_df.idcard == zjyckkAmountDf
     third_6_df.t03td144, third_6_df.t03td145, third_6_df.t03td146, third_6_df.t03td147, third_6_df.t03td148,
     third_6_df.t03td149, third_6_df.t03td150, zjyckkAmountDf.t03td151, zjyckkAmountDf.t03td152, zjyckkAmountDf.t03td153,
     zjyckkAmountDf.t03td154)
-third_7_df.show()
+#third_7_df.show()
 
 save_path = output_feature_hdfs_path + key_cal
 keys = third_7_df.rdd.map(lambda row: dropFrame(row))

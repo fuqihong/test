@@ -6,4 +6,4 @@ else
   etl_day=`date +%Y%m%d`
 fi
 
-nohup sh dailyYpdata.sh >> /var/log/pyspark/ypdaya/dailyYpdata.log.${etl_day} 2>&1 &
+nohup sh dailyYpdata.sh >> /var/log/pyspark/ypdata/dailyYpdata.log.${etl_day} 2>&1 &

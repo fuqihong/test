@@ -30,7 +30,7 @@ kkOrgCountInitDf = hsqlContext.sql("select idcard, "
                                    "no_mec,"
                                    "pay_result,"
                                    "count(1) as times "
-                                   "from {mid_table}  aa group by idcard,mec_type,datediff(current_date(),repay_tm),no_mec,pay_result".format(mid_table=input_mid_table_name))
+                                   "from {mid_table}  group by idcard,mec_type,datediff(current_date(),repay_tm),no_mec,pay_result".format(mid_table=input_mid_table_name))
 
 hsqlContext.registerDataFrameAsTable(kkOrgCountInitDf, "kkOrgCountInit")
 
