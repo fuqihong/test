@@ -136,10 +136,10 @@ countAvgDf = hsqlContext.sql("select idcard,recall_date,"
                              "from personal_cfsl_loan_deduct_seq_count")
 
 keys = countsqlDf.rdd.map(lambda row: dropFrame(row))
-keys.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
+keys.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
 
 keySeconds = countAvgDf.rdd.map(lambda row: dropFrame(row))
-keySeconds.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + 'countAvg_1')
+keySeconds.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + 'countAvg_1')
 
 sc.stop()
 

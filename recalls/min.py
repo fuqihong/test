@@ -347,7 +347,7 @@ minsqlDf = hsqlContext.sql("select idcard,recall_date,"
 
 
 keys = minsqlDf.rdd.map(lambda row: dropFrame(row))
-keys.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
+keys.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
 sc.stop()
 
 print key_cal + "_sql_daily" + " success " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))  +  "*"*90

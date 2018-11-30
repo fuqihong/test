@@ -1039,11 +1039,11 @@ sumAvgDf = hsqlContext.sql("select idcard,recall_date,"
                            "from personal_cfsl_loan_deduct_seq_sum")
 
 keys = sumsqlDf.rdd.map(lambda row: dropFrame(row))
-keys.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
+keys.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
 
 
 keySeconds = sumAvgDf.rdd.map(lambda row: dropFrame(row))
-keys.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + 'sumAvg')
+keys.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + 'sumAvg')
 
 sc.stop()
 

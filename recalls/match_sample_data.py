@@ -56,7 +56,7 @@ df_match_count = df_match_count.toPandas()
 output_path =  input_path.replace('.csv', '').replace('/*', '')
 
 keySeconds = matchDf.rdd.map(lambda row: dropFrame(row))
-keySeconds.repartition(10).saveAsTextFile(output_sample_data_path_pre + output_path)
+keySeconds.repartition(100).saveAsTextFile(output_sample_data_path_pre + output_path)
 
 print "samplesize: " + str(df_count.all_samples_count.values[0])
 print "matchsamplesize: " + str(df_match_count.match_count.values[0])

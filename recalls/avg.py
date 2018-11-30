@@ -333,7 +333,7 @@ avgsqlDf = hsqlContext.sql("select idcard,recall_date,"
                            "from personal_cfsl_loan_deduct_seq_avg_mid yy group by yy.idcard,yy.recall_date")
 
 keySeconds = avgsqlDf.rdd.map(lambda row: dropFrame(row))
-keySeconds.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
+keySeconds.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
 
 sc.stop()
 

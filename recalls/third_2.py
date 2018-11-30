@@ -257,7 +257,7 @@ third_7_df = third_6_df.join(zjyckkAmountDf, cond_6, 'left_outer').select(
 
 
 keys = third_7_df.rdd.map(lambda row: dropFrame(row))
-keys.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
+keys.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
 
 sc.stop()
 

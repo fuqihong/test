@@ -108,7 +108,7 @@ kkOrgCountDf = hsqlContext.sql("select idcard,recall_date,"
                                "from kkOrgCountMid aa group by aa.idcard,recall_date")
 
 keys = kkOrgCountDf.rdd.map(lambda row: dropFrame(row))
-keys.repartition(10).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
+keys.repartition(100).saveAsTextFile(output_feature_path_pre + output_path + '/' + key_cal)
 
 sc.stop()
 
