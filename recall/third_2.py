@@ -6,7 +6,7 @@
 # @file:mid.py.py
 
 # @time:2018/11/16 下午4:45
-from config import output_sample_data_path_pre,output_feature_path_pre,dropFrame
+from config import input_sample_path_pre,output_sample_data_path_pre,output_feature_path_pre,dropFrame
 from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
@@ -40,23 +40,33 @@ midDf = hsqlContext.createDataFrame(matchRDD,
 
 hsqlContext.registerDataFrameAsTable(midDf, "personal_cfsl_loan_deduct_seq")
 
+
+recallRDDS= sc.textFile(input_sample_path_pre  + input_path)
+#recallRDDS= sc.textFile('/Users/xilin.zheng/yeepay/PRD4/data3/re_call.csv')
+recallRDD = recallRDDS.map(lambda x: x.split(',')).map(lambda row: (row[0], row[1]))
+recallDf = hsqlContext.createDataFrame(recallRDD,
+                                         ['idcard', 'recall_date'])
+
+
+
+
 # 扣款失败后距离下一次成功的天数，按idcard
 kksbNextDayAADf = hsqlContext.sql(
-    "select aa.mec_type,aa.idcard, aa2.recall_date,aa.repay_tm from personal_cfsl_loan_deduct_seq aa "
+    "select aa.mec_type,aa.idcard, aa.recall_date,aa.repay_tm from personal_cfsl_loan_deduct_seq aa "
     "where  aa.pay_result = 0")
 
 hsqlContext.registerDataFrameAsTable(kksbNextDayAADf, "kksbNextDay_aa")
 
 kksbNextDayBBInitDf = hsqlContext.sql(
-    "select bb.idcard,bb2.recall_date,bb.repay_tm,bb.pay_result,bb.mec_type,"
-    "lag(bb.pay_result,1) over(partition by bb.idcard,bb2.recall_date,bb.mec_type order by bb.repay_tm) as last_result "
+    "select bb.idcard,bb.recall_date,bb.repay_tm,bb.pay_result,bb.mec_type,"
+    "lag(bb.pay_result,1) over(partition by bb.idcard,bb.recall_date,bb.mec_type order by bb.repay_tm) as last_result "
     "from personal_cfsl_loan_deduct_seq bb ")
 
 hsqlContext.registerDataFrameAsTable(kksbNextDayBBInitDf, "kksbNextDay_bb_init")
 
-kksbNextDayBBDf = hsqlContext.sql("select bb.idcard,aa.recall_date,"
+kksbNextDayBBDf = hsqlContext.sql("select bb.idcard,bb.recall_date,"
                                   "bb.repay_tm,bb.mec_type,"
-                                  "lag(bb.repay_tm,1,'2000-01-01') over(partition by bb.idcard,aa.recall_date,bb.mec_type order by bb.repay_tm) as last_repay_tm "
+                                  "lag(bb.repay_tm,1,'2000-01-01') over(partition by bb.idcard,bb.recall_date,bb.mec_type order by bb.repay_tm) as last_repay_tm "
                                   "from kksbNextDay_bb_init bb where bb.pay_result = 1 and bb.last_result = 0")
 
 hsqlContext.registerDataFrameAsTable(kksbNextDayBBDf, "kksbNextDay_bb")
@@ -69,7 +79,7 @@ kksbNextDayDf = hsqlContext.sql("select aa.idcard,aa.recall_date,"
                                 "round(avg(case when aa.mec_type = 'cf' then datediff(bb.repay_tm,aa.repay_tm) else null end),2) as t03td142,"
                                 "round(avg(case when aa.mec_type = 'sl' then datediff(bb.repay_tm,aa.repay_tm) else null end ),2)as t03td143 "
                                 "from kksbNextDay_aa aa join kksbNextDay_bb bb "
-                                "on aa.idcard = bb.idcard and aa.mec_type = bb.mec_type and aa.recall_date = aa.recall_date "
+                                "on aa.idcard = bb.idcard and aa.mec_type = bb.mec_type and aa.recall_date = bb.recall_date "
                                 "where aa.repay_tm > bb.last_repay_tm and aa.repay_tm < bb.repay_tm "
                                 "group by aa.idcard,aa.recall_date")
 
@@ -86,21 +96,21 @@ third_1_df = recallDf.join(kksbNextDayDf, cond, 'left_outer').select(
 
 # 扣款失败后距离下一次成功的天数，按idcard
 kksbNextDayAADf2 = hsqlContext.sql(
-    "select aa.idcard,aa2.recall_date,aa.repay_tm from personal_cfsl_loan_deduct_seq aa "
+    "select aa.idcard,aa.recall_date,aa.repay_tm from personal_cfsl_loan_deduct_seq aa "
     "where aa.pay_result = 0")
 
 hsqlContext.registerDataFrameAsTable(kksbNextDayAADf2, "kksbNextDay_cc")
 
 kksbNextDayBBInitDf2 = hsqlContext.sql(
-    "select bb.idcard,bb2.recall_date,bb.repay_tm,bb.pay_result,"
-    "lag(bb.pay_result,1) over(partition by bb.idcard,bb2.recall_date order by bb.repay_tm) as last_result "
+    "select bb.idcard,bb.recall_date,bb.repay_tm,bb.pay_result,"
+    "lag(bb.pay_result,1) over(partition by bb.idcard,bb.recall_date order by bb.repay_tm) as last_result "
     "from personal_cfsl_loan_deduct_seq bb")
 
 hsqlContext.registerDataFrameAsTable(kksbNextDayBBInitDf2, "kksbNextDay_dd_init")
 
-kksbNextDayBBDf2 = hsqlContext.sql("select bb.idcard, aa.recall_date,"
+kksbNextDayBBDf2 = hsqlContext.sql("select bb.idcard, bb.recall_date,"
                                    "bb.repay_tm,"
-                                   "lag(bb.repay_tm,1,'2000-01-01') over(partition by bb.idcard,aa.recall_date order by bb.repay_tm) as last_repay_tm "
+                                   "lag(bb.repay_tm,1,'2000-01-01') over(partition by bb.idcard,bb.recall_date order by bb.repay_tm) as last_repay_tm "
                                    "from kksbNextDay_dd_init bb where bb.pay_result = 1 and bb.last_result = 0")
 
 hsqlContext.registerDataFrameAsTable(kksbNextDayBBDf2, "kksbNextDay_dd")
@@ -109,7 +119,7 @@ kksbNextDayDf2 = hsqlContext.sql("select aa.idcard,aa.recall_date,"
                                  "max(datediff(bb.repay_tm,aa.repay_tm)) as t03td138,"
                                  "min(datediff(bb.repay_tm,aa.repay_tm)) as t03td141,"
                                  "round(avg(datediff(bb.repay_tm,aa.repay_tm)),2) as t03td144 "
-                                 "from kksbNextDay_cc aa join kksbNextDay_dd bb on aa.idcard = bb.idcard and aa.recall_date = aa.recall_date "
+                                 "from kksbNextDay_cc aa join kksbNextDay_dd bb on aa.idcard = bb.idcard and aa.recall_date = bb.recall_date "
                                  "where aa.repay_tm > bb.last_repay_tm and aa.repay_tm < bb.repay_tm "
                                  "group by aa.idcard,aa.recall_date")
 

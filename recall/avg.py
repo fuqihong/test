@@ -11,6 +11,7 @@ from pyspark import SparkContext
 from pyspark.sql import HiveContext
 import sys
 import re
+import time
 
 reload(sys)
 sys.setdefaultencoding('utf-8')

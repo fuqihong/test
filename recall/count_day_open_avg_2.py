@@ -112,7 +112,7 @@ countsqlDf = hsqlContext.sql("select idcard,recall_date,"
                              "from personal_cfsl_loan_deduct_seq_countDayOpen_mid yy group by yy.idcard,yy.recall_date ")
 
 
-countAllRDDS = sc.textFile(output_feature_path_pre + output_path + 'countAll')
+countAllRDDS = sc.textFile(output_feature_path_pre + output_path + '/countAll')
 #countAllRDDS = sc.textFile('/Users/xilin.zheng/yeepay/PRD4/data4/countAll')
 countAllRDD = countAllRDDS.map(lambda x: x.split(',')).map(lambda row: (row[0], row[1], row[13]))
 countAllDf = hsqlContext.createDataFrame(countAllRDD,

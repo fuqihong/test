@@ -17,7 +17,6 @@ def dropFrame(rows):
 
 
 input_sample_path_pre = '/user/tianchuang/spark/recall/'
+output_sample_data_path_pre = '/user/qihong.fu/recall.db/'
 
-output_sample_data_path_pre = '/user/qihong.fu/feature-pool/recall/'
-
-output_feature_path_pre = '/user/qihong.fu/feature-pool/fea_personal_cfsl_loan_daily/' 
+output_feature_path_pre = '/user/qihong.fu/recall-feature-pool/fea_personal_cfsl_loan_daily/' 
