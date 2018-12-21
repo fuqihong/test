@@ -1,0 +1,29 @@
+nohup: ignoring input
+/opt/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+WARNING:tensorflow:Using temporary folder as model directory: /tmp/tmp7r0vp56t
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.6/site-packages/tensorflow/python/estimator/inputs/queues/feeding_queue_runner.py:62: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.6/site-packages/tensorflow/python/estimator/inputs/queues/feeding_functions.py:500: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.6/site-packages/tensorflow/contrib/timeseries/python/timeseries/input_pipeline.py:708: batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if `dynamic_pad=True`).
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.6/site-packages/tensorflow/contrib/timeseries/python/timeseries/input_pipeline.py:778: maybe_shuffle_batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.filter(...).shuffle(min_after_dequeue).batch(batch_size)`.
+2018-12-21 19:05:10.943915: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: FMA
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.6/site-packages/tensorflow/python/training/monitored_session.py:804: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:Skipping summary for start_tuple, must be a float, np.float32, np.int64, np.int32 or int or np.ndarray or a serialized string of Summary.
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.6/site-packages/tensorflow/contrib/timeseries/python/timeseries/input_pipeline.py:148: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+WARNING:tensorflow:Input graph does not use tf.data.Dataset or contain a QueueRunner. That means predict yields forever. This is probably a mistake.
+WARNING:tensorflow:Using temporary folder as model directory: /tmp/tmpvlzi3j49
+WARNING:tensorflow:Skipping summary for start_tuple, must be a float, np.float32, np.int64, np.int32 or int or np.ndarray or a serialized string of Summary.
+WARNING:tensorflow:Input graph does not use tf.data.Dataset or contain a QueueRunner. That means predict yields forever. This is probably a mistake.
+WARNING:tensorflow:Using temporary folder as model directory: /tmp/tmph9fkcqdt

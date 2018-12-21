@@ -27,7 +27,7 @@ from tensorflow.contrib.timeseries.python.timeseries import  NumpyReader
 # In[4]:
 
 
-df_result = pd.read_csv("df_result_4_1.csv")
+df_result = pd.read_csv("df_result_4_3.csv")
 column_name_list = list(df_result.columns)
 
 dict_result = {}
@@ -75,7 +75,7 @@ for i in column_name_list:
         list_y.extend(list_result)
         dict_result[i] = list_y
 df_predict = pd.DataFrame.from_dict(dict_result)
-df_predict.to_csv("df_predict_1.csv")
+df_predict.to_csv("df_predict_3.csv")
 
 
 
