@@ -1,0 +1,436 @@
+Jan  7 15:12:14 bigdata sshd[13962]: Accepted password for qihong.fu from 10.149.80.117 port 37352 ssh2
+Jan  7 15:12:14 bigdata sshd[13962]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  7 15:21:48 bigdata sshd[14667]: Accepted password for qihong.fu from 192.168.123.113 port 42648 ssh2
+Jan  7 15:21:48 bigdata sshd[14667]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  7 17:44:49 bigdata sshd[28293]: Accepted password for qihong.fu from 10.149.80.117 port 58752 ssh2
+Jan  7 17:44:49 bigdata sshd[28293]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  7 18:33:06 bigdata sshd[13985]: Received disconnect from 10.149.80.117 port 37352:11: disconnected by user
+Jan  7 18:33:06 bigdata sshd[13985]: Disconnected from 10.149.80.117 port 37352
+Jan  7 18:33:06 bigdata sshd[13962]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  7 18:52:54 bigdata sshd[28301]: Received disconnect from 10.149.80.117 port 58752:11: disconnected by user
+Jan  7 18:52:54 bigdata sshd[28301]: Disconnected from 10.149.80.117 port 58752
+Jan  7 18:52:54 bigdata sshd[28293]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  7 19:35:29 bigdata sshd[14669]: Received disconnect from 192.168.123.113 port 42648:11: disconnected by user
+Jan  7 19:35:29 bigdata sshd[14669]: Disconnected from 192.168.123.113 port 42648
+Jan  7 19:35:29 bigdata sshd[14667]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  8 14:45:49 bigdata sshd[9660]: Accepted password for qihong.fu from 10.149.80.117 port 33446 ssh2
+Jan  8 14:45:49 bigdata sshd[9660]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  8 14:46:53 bigdata sshd[9663]: Received disconnect from 10.149.80.117 port 33446:11: disconnected by user
+Jan  8 14:46:53 bigdata sshd[9663]: Disconnected from 10.149.80.117 port 33446
+Jan  8 14:46:53 bigdata sshd[9660]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  8 14:48:46 bigdata sshd[9944]: Accepted password for qihong.fu from 10.149.80.117 port 33500 ssh2
+Jan  8 14:48:46 bigdata sshd[9944]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  8 15:02:29 bigdata sshd[10999]: Connection closed by 10.149.80.8 port 29586 [preauth]
+Jan  8 15:02:42 bigdata sshd[11010]: Accepted password for qihong.fu from 10.149.80.117 port 33516 ssh2
+Jan  8 15:02:42 bigdata sshd[11010]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  8 15:33:15 bigdata sshd[11032]: Received disconnect from 10.149.80.117 port 33516:11: disconnected by user
+Jan  8 15:33:15 bigdata sshd[11032]: Disconnected from 10.149.80.117 port 33516
+Jan  8 15:33:15 bigdata sshd[11010]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  8 15:59:01 bigdata sshd[16641]: Accepted password for qihong.fu from 10.149.80.117 port 34698 ssh2
+Jan  8 15:59:01 bigdata sshd[16641]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  8 17:52:35 bigdata sshd[29759]: Accepted password for qihong.fu from 10.149.80.117 port 54974 ssh2
+Jan  8 17:52:35 bigdata sshd[29759]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  8 17:59:00 bigdata sshd[29765]: Received disconnect from 10.149.80.117 port 54974:11: disconnected by user
+Jan  8 17:59:00 bigdata sshd[29765]: Disconnected from 10.149.80.117 port 54974
+Jan  8 17:59:00 bigdata sshd[29759]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  8 20:23:46 bigdata sshd[17387]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.149.80.117  user=qihong.fu
+Jan  8 20:23:48 bigdata sshd[17387]: Failed password for qihong.fu from 10.149.80.117 port 55160 ssh2
+Jan  8 20:23:51 bigdata sshd[17387]: Failed password for qihong.fu from 10.149.80.117 port 55160 ssh2
+Jan  8 20:23:57 bigdata sshd[17387]: Accepted password for qihong.fu from 10.149.80.117 port 55160 ssh2
+Jan  8 20:23:57 bigdata sshd[17387]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  8 21:41:29 bigdata sshd[16643]: Received disconnect from 10.149.80.117 port 34698:11: disconnected by user
+Jan  8 21:41:29 bigdata sshd[16643]: Disconnected from 10.149.80.117 port 34698
+Jan  8 21:41:29 bigdata sshd[16641]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  8 21:41:34 bigdata sshd[17412]: Received disconnect from 10.149.80.117 port 55160:11: disconnected by user
+Jan  8 21:41:34 bigdata sshd[17412]: Disconnected from 10.149.80.117 port 55160
+Jan  8 21:41:34 bigdata sshd[17387]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  8 21:41:42 bigdata sshd[9949]: Received disconnect from 10.149.80.117 port 33500:11: disconnected by user
+Jan  8 21:41:42 bigdata sshd[9949]: Disconnected from 10.149.80.117 port 33500
+Jan  8 21:41:42 bigdata sshd[9944]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  9 09:47:51 bigdata sshd[14993]: Accepted password for qihong.fu from 10.149.80.117 port 55990 ssh2
+Jan  9 09:47:51 bigdata sshd[14993]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  9 09:47:53 bigdata sshd[14990]: Accepted password for qihong.fu from 10.149.80.117 port 55988 ssh2
+Jan  9 09:47:53 bigdata sshd[14990]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  9 09:47:55 bigdata sshd[14988]: Accepted password for qihong.fu from 10.149.80.117 port 55986 ssh2
+Jan  9 09:47:55 bigdata sshd[14988]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  9 11:47:22 bigdata sshd[30288]: Accepted password for qihong.fu from 192.168.123.113 port 59976 ssh2
+Jan  9 11:47:22 bigdata sshd[30288]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  9 17:13:17 bigdata sshd[15041]: Received disconnect from 10.149.80.117 port 55988:11: disconnected by user
+Jan  9 17:13:17 bigdata sshd[15041]: Disconnected from 10.149.80.117 port 55988
+Jan  9 17:13:17 bigdata sshd[14990]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  9 18:56:09 bigdata sshd[14998]: Received disconnect from 10.149.80.117 port 55990:11: disconnected by user
+Jan  9 18:56:09 bigdata sshd[14998]: Disconnected from 10.149.80.117 port 55990
+Jan  9 18:56:09 bigdata sshd[14993]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  9 19:11:00 bigdata sshd[15079]: Received disconnect from 10.149.80.117 port 55986:11: disconnected by user
+Jan  9 19:11:00 bigdata sshd[15079]: Disconnected from 10.149.80.117 port 55986
+Jan  9 19:11:00 bigdata sshd[14988]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  9 20:09:18 bigdata sshd[25281]: Accepted password for qihong.fu from 192.168.123.113 port 36124 ssh2
+Jan  9 20:09:18 bigdata sshd[25281]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  9 20:09:24 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su
+Jan  9 20:09:24 bigdata su: pam_unix(su:session): session opened for user root by qihong.fu(uid=0)
+Jan  9 20:10:19 bigdata sshd[25283]: Received disconnect from 192.168.123.113 port 36124:11: disconnected by user
+Jan  9 20:10:19 bigdata sshd[25283]: Disconnected from 192.168.123.113 port 36124
+Jan  9 20:10:19 bigdata sshd[25281]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan  9 20:10:19 bigdata su: pam_unix(su:session): session closed for user root
+Jan  9 20:10:29 bigdata sshd[25477]: Accepted password for qihong.fu from 192.168.123.113 port 36192 ssh2
+Jan  9 20:10:29 bigdata sshd[25477]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan  9 20:10:38 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=cheng.mei
+Jan  9 20:11:07 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/bash
+Jan  9 20:11:28 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/bash -c cheng.mei
+Jan  9 21:59:22 bigdata sshd[25479]: Received disconnect from 192.168.123.113 port 36192:11: disconnected by user
+Jan  9 21:59:22 bigdata sshd[25479]: Disconnected from 192.168.123.113 port 36192
+Jan  9 21:59:22 bigdata sshd[25477]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 09:56:10 bigdata sshd[23756]: Accepted password for qihong.fu from 192.168.123.113 port 39548 ssh2
+Jan 10 09:56:10 bigdata sshd[23756]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 10 10:13:35 bigdata sshd[25463]: Accepted password for qihong.fu from 192.168.123.113 port 39820 ssh2
+Jan 10 10:13:35 bigdata sshd[25463]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 10 12:10:43 bigdata sshd[23758]: Received disconnect from 192.168.123.113 port 39548:11: disconnected by user
+Jan 10 12:10:43 bigdata sshd[23758]: Disconnected from 192.168.123.113 port 39548
+Jan 10 12:10:43 bigdata sshd[23756]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 12:12:14 bigdata sshd[25466]: Received disconnect from 192.168.123.113 port 39820:11: disconnected by user
+Jan 10 12:12:14 bigdata sshd[25466]: Disconnected from 192.168.123.113 port 39820
+Jan 10 12:12:14 bigdata sshd[25463]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 13:13:29 bigdata sshd[8321]: Accepted password for qihong.fu from 10.149.80.117 port 51412 ssh2
+Jan 10 13:13:29 bigdata sshd[8321]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 10 13:22:38 bigdata sshd[9423]: Accepted password for qihong.fu from 192.168.123.113 port 42342 ssh2
+Jan 10 13:22:38 bigdata sshd[9423]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 10 15:20:59 bigdata sshd[20465]: Accepted password for qihong.fu from 192.168.123.113 port 43406 ssh2
+Jan 10 15:20:59 bigdata sshd[20465]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 10 16:51:19 bigdata sshd[8324]: Received disconnect from 10.149.80.117 port 51412:11: disconnected by user
+Jan 10 16:51:19 bigdata sshd[8324]: Disconnected from 10.149.80.117 port 51412
+Jan 10 16:51:19 bigdata sshd[8321]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 16:52:21 bigdata sshd[29127]: Accepted password for qihong.fu from 10.149.80.117 port 52226 ssh2
+Jan 10 16:52:21 bigdata sshd[29127]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 10 18:30:07 bigdata sshd[20468]: Received disconnect from 192.168.123.113 port 43406:11: disconnected by user
+Jan 10 18:30:07 bigdata sshd[20468]: Disconnected from 192.168.123.113 port 43406
+Jan 10 18:30:07 bigdata sshd[20465]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 19:18:50 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/sbin/useradd jinsong.zhang
+Jan 10 19:18:50 bigdata useradd[9759]: new group: name=jinsong.zhang, GID=2047
+Jan 10 19:18:50 bigdata useradd[9759]: new user: name=jinsong.zhang, UID=2047, GID=2047, home=/home/jinsong.zhang, shell=/bin/bash
+Jan 10 19:19:15 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/passwd jinsong.zhang
+Jan 10 19:19:27 bigdata passwd: pam_unix(passwd:chauthtok): password changed for jinsong.zhang
+Jan 10 19:19:53 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/cd /home/jinsong.zhang/
+Jan 10 19:20:08 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -
+Jan 10 19:20:08 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 19:20:43 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=jinsong.zhang
+Jan 10 19:20:51 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=jinsong.zhang
+Jan 10 19:22:51 bigdata sudo:    root : TTY=pts/8 ; PWD=/etc/jupyterhub ; USER=root ; COMMAND=/bin/passwd jinsong.zhang
+Jan 10 19:23:01 bigdata passwd: pam_unix(passwd:chauthtok): password changed for jinsong.zhang
+Jan 10 19:24:10 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=jinsong.zhang
+Jan 10 19:25:04 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 19:25:25 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -
+Jan 10 19:25:25 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 19:26:10 bigdata useradd[10536]: failed adding user 'jinsong.zhang', exit code: 9
+Jan 10 19:26:44 bigdata userdel[10572]: delete user 'jinsong.zhang'
+Jan 10 19:26:44 bigdata userdel[10572]: removed group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:26:44 bigdata userdel[10572]: removed shadow group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:26:56 bigdata useradd[10601]: new group: name=jinsong.zhang, GID=2047
+Jan 10 19:26:56 bigdata useradd[10601]: new user: name=jinsong.zhang, UID=2047, GID=2047, home=/home/jinsong.zhang, shell=/bin/bash
+Jan 10 19:27:11 bigdata userdel[10607]: delete user 'jinsong.zhang'
+Jan 10 19:27:11 bigdata userdel[10607]: removed group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:27:11 bigdata userdel[10607]: removed shadow group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:27:51 bigdata useradd[10674]: new group: name=jinsong.zhang, GID=2047
+Jan 10 19:27:51 bigdata useradd[10674]: new user: name=jinsong.zhang, UID=2047, GID=2047, home=/home/jinsong.zhang, shell=/bin/bash
+Jan 10 19:28:29 bigdata passwd: pam_unix(passwd:chauthtok): password changed for jinsong.zhang
+Jan 10 19:28:37 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=jinsong.zhang
+Jan 10 19:29:46 bigdata passwd: pam_unix(passwd:chauthtok): password changed for jinsong.zhang
+Jan 10 19:30:40 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=jinsong.zhang
+Jan 10 19:33:47 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 19:34:28 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/8 ruser=qihong.fu rhost=  user=jinsong.zhang
+Jan 10 19:34:42 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/8 ruser=qihong.fu rhost=  user=jinsong.zhang
+Jan 10 19:34:54 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/8 ruser=qihong.fu rhost=  user=jinsong.zhang
+Jan 10 19:35:14 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -
+Jan 10 19:35:14 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 19:35:24 bigdata su: pam_unix(su:session): session opened for user jinsong.zhang by qihong.fu(uid=0)
+Jan 10 19:36:24 bigdata su: pam_unix(su:session): session closed for user jinsong.zhang
+Jan 10 19:36:28 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 19:36:38 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/8 ruser=qihong.fu rhost=  user=jinsong.zhang
+Jan 10 19:37:38 bigdata sshd[11644]: Accepted password for qihong.fu from 192.168.123.113 port 46580 ssh2
+Jan 10 19:37:38 bigdata sshd[11644]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 10 19:37:57 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/vim /etc/pam.d/common-password
+Jan 10 19:38:26 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -i
+Jan 10 19:38:31 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -
+Jan 10 19:38:31 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 19:38:45 bigdata userdel[12085]: delete user 'jinsong.zhang'
+Jan 10 19:38:45 bigdata userdel[12085]: removed group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:38:45 bigdata userdel[12085]: removed shadow group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:39:10 bigdata useradd[12116]: new group: name=jinsong.zhang, GID=2047
+Jan 10 19:39:10 bigdata useradd[12116]: new user: name=jinsong.zhang, UID=2047, GID=2047, home=/home/jinsong.zhang, shell=/bin/bash
+Jan 10 19:39:35 bigdata passwd: pam_pwquality(passwd:chauthtok): pam_get_authtok_verify returned error: Failed preliminary check by password service
+Jan 10 19:39:54 bigdata passwd: pam_unix(passwd:chauthtok): password changed for jinsong.zhang
+Jan 10 19:40:30 bigdata userdel[12233]: delete user 'jinsong.zhang'
+Jan 10 19:40:30 bigdata userdel[12233]: removed group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:40:30 bigdata userdel[12233]: removed shadow group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:40:37 bigdata useradd[12244]: new group: name=jinsong.zhang, GID=2047
+Jan 10 19:40:37 bigdata useradd[12244]: new user: name=jinsong.zhang, UID=2047, GID=2047, home=/home/jinsong.zhang, shell=/bin/bash
+Jan 10 19:41:05 bigdata passwd: pam_unix(passwd:chauthtok): password changed for jinsong.zhang
+Jan 10 19:41:52 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=jinsong.zhang
+Jan 10 19:44:04 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/var/log ; USER=root ; COMMAND=/bin/tail -fn 200 messages
+Jan 10 19:45:45 bigdata userdel[12635]: delete user 'jinsong.zhang'
+Jan 10 19:45:45 bigdata userdel[12635]: removed group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:45:45 bigdata userdel[12635]: removed shadow group 'jinsong.zhang' owned by 'jinsong.zhang'
+Jan 10 19:47:35 bigdata useradd[12804]: new group: name=zhangjinsong, GID=2047
+Jan 10 19:47:35 bigdata useradd[12804]: new user: name=zhangjinsong, UID=2047, GID=2047, home=/home/zhangjinsong, shell=/bin/bash
+Jan 10 19:47:47 bigdata passwd: pam_unix(passwd:chauthtok): password changed for zhangjinsong
+Jan 10 19:48:17 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/var/log ; USER=root ; COMMAND=/bin/tail -fn 200 messages
+Jan 10 19:50:04 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/var/lib/rstudio-server/conf ; USER=root ; COMMAND=/bin/journalctl -u rstudio-server
+Jan 10 19:50:36 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/var/lib/rstudio-server/conf ; USER=root ; COMMAND=/bin/journalctl -f
+Jan 10 19:51:37 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 19:51:45 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/8 ruser=qihong.fu rhost=  user=zhangjinsong
+Jan 10 19:52:58 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -
+Jan 10 19:52:58 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 19:53:05 bigdata sudo:    root : TTY=pts/8 ; PWD=/root ; USER=root ; COMMAND=/bin/bash
+Jan 10 19:53:21 bigdata su: pam_unix(su:session): session opened for user zhangjinsong by qihong.fu(uid=0)
+Jan 10 19:53:25 bigdata su: pam_unix(su:session): session closed for user zhangjinsong
+Jan 10 19:53:28 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 19:53:34 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/8 ruser=qihong.fu rhost=  user=zhangjinsong
+Jan 10 19:55:04 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/vim /var/log/secure
+Jan 10 19:55:46 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -
+Jan 10 19:55:46 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 19:56:05 bigdata passwd: pam_unix(passwd:chauthtok): password changed for zhangjinsong
+Jan 10 19:56:37 bigdata polkitd[852]: Registered Authentication Agent for unix-process:14215:1938703637 (system bus name :1.168054 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan 10 19:56:37 bigdata polkitd[852]: Unregistered Authentication Agent for unix-process:14215:1938703637 (system bus name :1.168054, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Jan 10 19:57:49 bigdata userdel[14361]: delete user 'zhangjinsong'
+Jan 10 19:57:49 bigdata userdel[14361]: removed group 'zhangjinsong' owned by 'zhangjinsong'
+Jan 10 19:57:49 bigdata userdel[14361]: removed shadow group 'zhangjinsong' owned by 'zhangjinsong'
+Jan 10 19:58:04 bigdata useradd[14440]: new group: name=zhangjinsong, GID=2047
+Jan 10 19:58:04 bigdata useradd[14440]: new user: name=zhangjinsong, UID=2047, GID=2047, home=/home/zhangjinsong, shell=/bin/bash
+Jan 10 19:58:26 bigdata passwd: pam_unix(passwd:chauthtok): password changed for zhangjinsong
+Jan 10 19:58:37 bigdata su: pam_unix(su:session): session opened for user zhangjinsong by qihong.fu(uid=0)
+Jan 10 20:02:56 bigdata su: pam_unix(su:session): session closed for user zhangjinsong
+Jan 10 20:02:59 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 20:03:39 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su -
+Jan 10 20:03:39 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 20:04:28 bigdata passwd: pam_pwquality(passwd:chauthtok): pam_get_authtok_verify returned error: Failed preliminary check by password service
+Jan 10 20:04:30 bigdata passwd: pam_unix(passwd:chauthtok): password changed for zhangjinsong
+Jan 10 20:04:48 bigdata passwd: pam_unix(passwd:chauthtok): password changed for zhangjinsong
+Jan 10 20:05:24 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 20:05:35 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/11 ruser=qihong.fu rhost=  user=zhangjinsong
+Jan 10 20:05:43 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/11 ruser=qihong.fu rhost=  user=zhangjinsong
+Jan 10 20:06:25 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/11 ruser=qihong.fu rhost=  user=zhangjinsong
+Jan 10 20:08:15 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/11 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 10 20:08:30 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/11 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 10 20:09:39 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su cheng.mei
+Jan 10 20:09:39 bigdata su: pam_unix(su:session): session opened for user cheng.mei by qihong.fu(uid=0)
+Jan 10 20:09:57 bigdata su: pam_unix(su:session): session closed for user cheng.mei
+Jan 10 20:10:07 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su zhangjinsong
+Jan 10 20:10:07 bigdata su: pam_unix(su:session): session opened for user zhangjinsong by qihong.fu(uid=0)
+Jan 10 20:10:47 bigdata su: pam_unix(su:session): session closed for user zhangjinsong
+Jan 10 20:11:03 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 10 20:11:05 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 10 20:15:31 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/vim /var/log/secure
+Jan 10 20:16:39 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/sbin/chpasswd
+Jan 10 20:18:07 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/etc ; USER=root ; COMMAND=/bin/vim passwd
+Jan 10 20:18:39 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/etc ; USER=root ; COMMAND=/bin/vim passwd-
+Jan 10 20:19:47 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 10 20:23:01 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/11 ruser=qihong.fu rhost=  user=root
+Jan 10 20:23:01 bigdata su: pam_succeed_if(su:auth): requirement "uid >= 1000" not met by user "root"
+Jan 10 20:23:09 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su -
+Jan 10 20:23:09 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 20:23:43 bigdata passwd: pam_unix(passwd:chauthtok): password changed for zhangjinsong
+Jan 10 20:25:16 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 20:34:28 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/tail -fn 200 /var/log/syslog
+Jan 10 20:35:33 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/sbin/rstudio-server verify-installation
+Jan 10 20:35:33 bigdata polkitd[852]: Registered Authentication Agent for unix-process:17636:1938937239 (system bus name :1.168107 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan 10 20:35:33 bigdata polkitd[852]: Unregistered Authentication Agent for unix-process:17636:1938937239 (system bus name :1.168107, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Jan 10 20:35:34 bigdata polkitd[852]: Registered Authentication Agent for unix-process:17676:1938937350 (system bus name :1.168108 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan 10 20:35:34 bigdata polkitd[852]: Unregistered Authentication Agent for unix-process:17676:1938937350 (system bus name :1.168108, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Jan 10 20:37:47 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/cat /var/log/user.log
+Jan 10 20:39:38 bigdata sudo: qihong.fu : TTY=pts/11 ; PWD=/var/log ; USER=root ; COMMAND=/bin/tail -fn 200 messages
+Jan 10 20:41:24 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/var/lib/rstudio-server/conf ; USER=root ; COMMAND=/bin/journalctl -u rstudio-server
+Jan 10 20:42:11 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/var/lib/rstudio-server/conf ; USER=root ; COMMAND=/bin/vim /etc/sssd/sssd.conf
+Jan 10 20:45:08 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 10 20:47:26 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/sbin/usermod -a -G shadow zhangjinsong
+Jan 10 20:48:11 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Jan 10 20:49:51 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/vim vim /etc/jupyterhub/jupyterhub_config.py
+Jan 10 20:50:07 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/vim /etc/jupyterhub/jupyterhub_config.py
+Jan 10 20:52:01 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu/pyspark/tianchuang/daily ; USER=root ; COMMAND=/bin/su -
+Jan 10 20:52:01 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 10 20:52:35 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 10 20:54:57 bigdata sshd[30340]: Received disconnect from 192.168.123.113 port 59976:11: disconnected by user
+Jan 10 20:54:57 bigdata sshd[30340]: Disconnected from 192.168.123.113 port 59976
+Jan 10 20:54:57 bigdata sshd[30288]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 20:54:57 bigdata sshd[9426]: Received disconnect from 192.168.123.113 port 42342:11: disconnected by user
+Jan 10 20:54:57 bigdata sshd[9426]: Disconnected from 192.168.123.113 port 42342
+Jan 10 20:54:57 bigdata sshd[9423]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 20:54:57 bigdata sshd[11647]: Received disconnect from 192.168.123.113 port 46580:11: disconnected by user
+Jan 10 20:54:57 bigdata sshd[11647]: Disconnected from 192.168.123.113 port 46580
+Jan 10 20:54:57 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 10 20:54:57 bigdata sshd[11644]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 10 22:33:45 bigdata sshd[29130]: Received disconnect from 10.149.80.117 port 52226:11: disconnected by user
+Jan 10 22:33:45 bigdata sshd[29130]: Disconnected from 10.149.80.117 port 52226
+Jan 10 22:33:45 bigdata sshd[29127]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 09:57:52 bigdata sshd[9879]: Accepted password for qihong.fu from 192.168.123.113 port 48272 ssh2
+Jan 11 09:57:52 bigdata sshd[9879]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 10:32:10 bigdata sshd[16057]: Accepted password for qihong.fu from 192.168.123.113 port 49204 ssh2
+Jan 11 10:32:10 bigdata sshd[16057]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 10:44:58 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 10:49:04 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su -
+Jan 11 10:49:04 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 11 10:49:24 bigdata passwd: pam_unix(passwd:chauthtok): password changed for zhangjinsong
+Jan 11 10:49:35 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 10:49:45 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 11 10:52:59 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home ; USER=root ; COMMAND=/sbin/userdel -r xiao.han
+Jan 11 10:55:11 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 10:55:23 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/home ; USER=root ; COMMAND=/sbin/userdel -r xiao.han
+Jan 11 10:55:23 bigdata userdel[18142]: delete user 'xiao.han'
+Jan 11 10:55:23 bigdata userdel[18142]: removed group 'xiao.han' owned by 'xiao.han'
+Jan 11 10:55:23 bigdata userdel[18142]: removed shadow group 'xiao.han' owned by 'xiao.han'
+Jan 11 10:56:01 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 10:56:14 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 10:58:18 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 11:17:43 bigdata sudo: qihong.fu : TTY=pts/8 ; PWD=/etc/pam.d ; USER=root ; COMMAND=/bin/cp /etc/pam.d/login /etc/pam.d/rstudio
+Jan 11 11:33:39 bigdata sshd[22580]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.123.113  user=qihong.fu
+Jan 11 11:33:42 bigdata sshd[22580]: Failed password for qihong.fu from 192.168.123.113 port 50356 ssh2
+Jan 11 11:33:43 bigdata sshd[22580]: Accepted password for qihong.fu from 192.168.123.113 port 50356 ssh2
+Jan 11 11:33:43 bigdata sshd[22580]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 11:47:58 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/cat /etc/pam.d/login
+Jan 11 11:49:24 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/vim /etc/pam.d/login
+Jan 11 11:51:56 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/vim /etc/pam.d/login
+Jan 11 11:53:12 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 11:53:19 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/vim /etc/pam.d/login
+Jan 11 11:55:00 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/vim /etc/pam.d/login
+Jan 11 11:56:04 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 11:57:51 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/9 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 11 11:58:03 bigdata sudo: qihong.fu : TTY=pts/9 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su cheng.mei
+Jan 11 11:58:03 bigdata su: pam_unix(su:session): session opened for user cheng.mei by qihong.fu(uid=0)
+Jan 11 11:58:30 bigdata sshd[24899]: Accepted password for qihong.fu from 192.168.123.113 port 51498 ssh2
+Jan 11 11:58:30 bigdata sshd[24899]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 11:58:32 bigdata su: pam_unix(su:session): session closed for user cheng.mei
+Jan 11 11:58:36 bigdata sudo: qihong.fu : TTY=pts/10 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su cheng.mei
+Jan 11 11:58:36 bigdata su: pam_unix(su:session): session opened for user cheng.mei by qihong.fu(uid=0)
+Jan 11 12:06:46 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 12:13:28 bigdata unix_chkpwd[26655]: check pass; user unknown
+Jan 11 12:13:28 bigdata unix_chkpwd[26656]: check pass; user unknown
+Jan 11 12:13:28 bigdata unix_chkpwd[26656]: password check failed for user (zhangjinsong)
+Jan 11 12:13:28 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=2021 euid=2021 tty= ruser= rhost=  user=zhangjinsong
+Jan 11 12:13:42 bigdata unix_chkpwd[26687]: check pass; user unknown
+Jan 11 12:13:42 bigdata unix_chkpwd[26688]: check pass; user unknown
+Jan 11 12:13:42 bigdata unix_chkpwd[26688]: password check failed for user (cheng.mei)
+Jan 11 12:13:42 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=2021 euid=2021 tty= ruser= rhost=  user=cheng.mei
+Jan 11 12:22:15 bigdata sshd[24901]: Received disconnect from 192.168.123.113 port 51498:11: disconnected by user
+Jan 11 12:22:15 bigdata sshd[24901]: Disconnected from 192.168.123.113 port 51498
+Jan 11 12:22:15 bigdata sshd[24899]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 12:22:15 bigdata su: pam_unix(su:session): session closed for user cheng.mei
+Jan 11 12:30:03 bigdata sshd[16059]: Received disconnect from 192.168.123.113 port 49204:11: disconnected by user
+Jan 11 12:30:03 bigdata sshd[16059]: Disconnected from 192.168.123.113 port 49204
+Jan 11 12:30:03 bigdata sshd[16057]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 12:33:34 bigdata sshd[22612]: Received disconnect from 192.168.123.113 port 50356:11: disconnected by user
+Jan 11 12:33:34 bigdata sshd[22612]: Disconnected from 192.168.123.113 port 50356
+Jan 11 12:33:34 bigdata sshd[22580]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 13:13:51 bigdata sshd[9883]: Received disconnect from 192.168.123.113 port 48272:11: disconnected by user
+Jan 11 13:13:51 bigdata sshd[9883]: Disconnected from 192.168.123.113 port 48272
+Jan 11 13:13:51 bigdata sshd[9879]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 13:30:47 bigdata unix_chkpwd[457]: check pass; user unknown
+Jan 11 13:30:47 bigdata unix_chkpwd[458]: check pass; user unknown
+Jan 11 13:30:47 bigdata unix_chkpwd[458]: password check failed for user (cheng.mei)
+Jan 11 13:30:47 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=2021 euid=2021 tty= ruser= rhost=  user=cheng.mei
+Jan 11 13:31:16 bigdata sshd[482]: Accepted password for qihong.fu from 192.168.123.113 port 52368 ssh2
+Jan 11 13:31:16 bigdata sshd[482]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 13:33:09 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=  user=naiyu.zhang
+Jan 11 13:34:35 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 11 13:37:11 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Jan 11 13:38:07 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su -
+Jan 11 13:38:08 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 11 13:38:35 bigdata useradd[1186]: new group: name=test_user, GID=2048
+Jan 11 13:38:35 bigdata useradd[1186]: new user: name=test_user, UID=2048, GID=2048, home=/home/test_user, shell=/bin/bash
+Jan 11 13:39:30 bigdata passwd: pam_pwquality(passwd:chauthtok): pam_get_authtok_verify returned error: Failed preliminary check by password service
+Jan 11 13:39:35 bigdata passwd: pam_unix(passwd:chauthtok): password changed for test_user
+Jan 11 13:40:05 bigdata userdel[1317]: delete user 'test_user'
+Jan 11 13:40:05 bigdata userdel[1317]: removed group 'test_user' owned by 'test_user'
+Jan 11 13:40:05 bigdata userdel[1317]: removed shadow group 'test_user' owned by 'test_user'
+Jan 11 13:40:07 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 11 13:58:09 bigdata sshd[484]: Received disconnect from 192.168.123.113 port 52368:11: disconnected by user
+Jan 11 13:58:09 bigdata sshd[484]: Disconnected from 192.168.123.113 port 52368
+Jan 11 13:58:09 bigdata sshd[482]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 14:27:38 bigdata sshd[5328]: Accepted password for qihong.fu from 192.168.123.113 port 53226 ssh2
+Jan 11 14:27:38 bigdata sshd[5328]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 14:36:56 bigdata sshd[5330]: Received disconnect from 192.168.123.113 port 53226:11: disconnected by user
+Jan 11 14:36:56 bigdata sshd[5330]: Disconnected from 192.168.123.113 port 53226
+Jan 11 14:36:56 bigdata sshd[5328]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 15:19:11 bigdata sshd[10493]: Accepted password for qihong.fu from 192.168.123.113 port 54082 ssh2
+Jan 11 15:19:11 bigdata sshd[10493]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 15:19:43 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 11 15:19:52 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home ; USER=root ; COMMAND=/bin/su cheng.mei
+Jan 11 15:19:52 bigdata su: pam_unix(su:session): session opened for user cheng.mei by qihong.fu(uid=0)
+Jan 11 15:28:24 bigdata sshd[15053]: Accepted password for qihong.fu from 10.149.80.117 port 47640 ssh2
+Jan 11 15:28:24 bigdata sshd[15053]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 15:36:41 bigdata unix_chkpwd[21104]: check pass; user unknown
+Jan 11 15:36:41 bigdata unix_chkpwd[21105]: check pass; user unknown
+Jan 11 15:36:41 bigdata unix_chkpwd[21105]: password check failed for user (cheng.mei)
+Jan 11 15:36:41 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=2021 euid=2021 tty= ruser= rhost=  user=cheng.mei
+Jan 11 15:36:54 bigdata unix_chkpwd[21157]: password check failed for user (qihong.fu)
+Jan 11 15:36:54 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=2021 euid=2021 tty= ruser= rhost=  user=qihong.fu
+Jan 11 15:42:49 bigdata unix_chkpwd[25608]: password check failed for user (qihong.fu)
+Jan 11 15:42:49 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=2021 euid=2021 tty= ruser= rhost=  user=qihong.fu
+Jan 11 15:48:53 bigdata unix_chkpwd[27889]: password check failed for user (qihong.fu)
+Jan 11 15:48:53 bigdata python: pam_unix(login:auth): authentication failure; logname= uid=2021 euid=2021 tty= ruser= rhost=  user=qihong.fu
+Jan 11 15:51:53 bigdata sshd[28545]: Invalid user user04 from 192.168.123.113 port 54784
+Jan 11 15:51:53 bigdata sshd[28545]: input_userauth_request: invalid user user04 [preauth]
+Jan 11 15:52:53 bigdata sshd[28545]: pam_unix(sshd:auth): check pass; user unknown
+Jan 11 15:52:53 bigdata sshd[28545]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.123.113
+Jan 11 15:52:55 bigdata sshd[28545]: Failed password for invalid user user04 from 192.168.123.113 port 54784 ssh2
+Jan 11 15:53:14 bigdata sshd[28545]: pam_unix(sshd:auth): check pass; user unknown
+Jan 11 15:53:16 bigdata sshd[28545]: Failed password for invalid user user04 from 192.168.123.113 port 54784 ssh2
+Jan 11 16:01:21 bigdata sshd[32111]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.123.113  user=zhangjinsong
+Jan 11 16:01:24 bigdata sshd[32111]: Failed password for zhangjinsong from 192.168.123.113 port 54996 ssh2
+Jan 11 16:01:27 bigdata sshd[32111]: Failed password for zhangjinsong from 192.168.123.113 port 54996 ssh2
+Jan 11 16:01:27 bigdata sshd[32111]: Failed password for zhangjinsong from 192.168.123.113 port 54996 ssh2
+Jan 11 16:01:27 bigdata sshd[32111]: Connection closed by 192.168.123.113 port 54996 [preauth]
+Jan 11 16:03:16 bigdata su: pam_unix(su:session): session closed for user cheng.mei
+Jan 11 16:03:27 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home ; USER=root ; COMMAND=/bin/cat /etc/ssh/sshd_config
+Jan 11 16:03:54 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home ; USER=root ; COMMAND=/bin/vim /etc/ssh/sshd_config
+Jan 11 16:06:20 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home ; USER=root ; COMMAND=/bin/vim /etc/ssh/sshd_config
+Jan 11 16:06:40 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home ; USER=root ; COMMAND=/bin/vim /etc/security/access.conf
+Jan 11 16:08:20 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 11 16:08:22 bigdata sshd[3457]: Invalid user jinsong.zhang from 192.168.123.113 port 55106
+Jan 11 16:08:22 bigdata sshd[3457]: input_userauth_request: invalid user jinsong.zhang [preauth]
+Jan 11 16:08:30 bigdata sshd[3457]: pam_unix(sshd:auth): check pass; user unknown
+Jan 11 16:08:30 bigdata sshd[3457]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.123.113
+Jan 11 16:08:32 bigdata sshd[3457]: Failed password for invalid user jinsong.zhang from 192.168.123.113 port 55106 ssh2
+Jan 11 16:17:24 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 11 16:17:58 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=cheng.mei
+Jan 11 16:21:15 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Jan 11 16:23:44 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/tail -fn 200 /var/log/messages
+Jan 11 16:25:58 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/var/log ; USER=root ; COMMAND=/bin/cd httpd/
+Jan 11 16:26:45 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/var/log ; USER=root ; COMMAND=/bin/tail -fn 200 secure
+Jan 11 16:33:40 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Jan 11 16:39:23 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su -
+Jan 11 16:39:23 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 11 16:41:19 bigdata useradd[11171]: new group: name=xincheng.zhao, GID=2048
+Jan 11 16:41:19 bigdata useradd[11171]: new user: name=xincheng.zhao, UID=2048, GID=2048, home=/home/xincheng.zhao, shell=/bin/bash
+Jan 11 16:41:34 bigdata passwd: pam_unix(passwd:chauthtok): password changed for xincheng.zhao
+Jan 11 16:41:55 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 11 16:42:24 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=xincheng.zhao
+Jan 11 16:43:07 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/su -
+Jan 11 16:43:07 bigdata su: pam_unix(su-l:session): session opened for user root by qihong.fu(uid=0)
+Jan 11 16:43:12 bigdata su: pam_unix(su:session): session opened for user xincheng.zhao by qihong.fu(uid=0)
+Jan 11 16:43:42 bigdata su: pam_unix(su:session): session closed for user xincheng.zhao
+Jan 11 16:43:46 bigdata su: pam_unix(su-l:session): session closed for user root
+Jan 11 16:54:13 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/vim /etc/security/limits.d/20-nproc.conf
+Jan 11 16:58:25 bigdata sshd[12559]: Invalid user . from 192.168.123.113 port 55708
+Jan 11 16:58:25 bigdata sshd[12559]: input_userauth_request: invalid user . [preauth]
+Jan 11 16:58:25 bigdata sshd[12559]: Failed none for invalid user . from 192.168.123.113 port 55708 ssh2
+Jan 11 16:58:25 bigdata sshd[12559]: Failed password for invalid user . from 192.168.123.113 port 55708 ssh2
+Jan 11 16:58:25 bigdata sshd[12559]: Failed password for invalid user . from 192.168.123.113 port 55708 ssh2
+Jan 11 16:58:25 bigdata sshd[12559]: Connection closed by 192.168.123.113 port 55708 [preauth]
+Jan 11 16:58:35 bigdata sshd[12566]: Invalid user c from 192.168.123.113 port 55792
+Jan 11 16:58:35 bigdata sshd[12566]: input_userauth_request: invalid user c [preauth]
+Jan 11 16:58:37 bigdata sshd[12566]: pam_unix(sshd:auth): check pass; user unknown
+Jan 11 16:58:37 bigdata sshd[12566]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.123.113
+Jan 11 16:58:39 bigdata sshd[12566]: Failed password for invalid user c from 192.168.123.113 port 55792 ssh2
+Jan 11 16:58:41 bigdata sshd[12566]: pam_unix(sshd:auth): check pass; user unknown
+Jan 11 16:58:43 bigdata sshd[12566]: Failed password for invalid user c from 192.168.123.113 port 55792 ssh2
+Jan 11 16:58:45 bigdata sshd[12566]: pam_unix(sshd:auth): check pass; user unknown
+Jan 11 16:58:47 bigdata sshd[12566]: Failed password for invalid user c from 192.168.123.113 port 55792 ssh2
+Jan 11 16:58:47 bigdata sshd[12566]: Connection closed by 192.168.123.113 port 55792 [preauth]
+Jan 11 16:58:47 bigdata sshd[12566]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.123.113
+Jan 11 16:59:19 bigdata sshd[10495]: Received disconnect from 192.168.123.113 port 54082:11: disconnected by user
+Jan 11 16:59:19 bigdata sshd[10495]: Disconnected from 192.168.123.113 port 54082
+Jan 11 16:59:19 bigdata sshd[10493]: pam_unix(sshd:session): session closed for user qihong.fu
+Jan 11 16:59:42 bigdata sshd[12672]: Accepted password for qihong.fu from 192.168.123.113 port 55882 ssh2
+Jan 11 16:59:42 bigdata sshd[12672]: pam_unix(sshd:session): session opened for user qihong.fu by (uid=0)
+Jan 11 17:00:45 bigdata su: pam_unix(su:auth): authentication failure; logname=qihong.fu uid=2021 euid=0 tty=pts/6 ruser=qihong.fu rhost=  user=xincheng.zhao
+Jan 11 17:02:32 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/tail -fn 200 /var/log/secure
+Jan 11 17:24:21 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu ; USER=root ; COMMAND=/bin/cat /var/log/secure
+Jan 11 17:25:52 bigdata sudo: qihong.fu : TTY=pts/6 ; PWD=/home/qihong.fu/notebook/gitlab/test ; USER=root ; COMMAND=/bin/cp /var/log/secure secrue
